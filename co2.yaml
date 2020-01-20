@@ -395,9 +395,7 @@ transport . avion . impact carbone unitaire:
           montant: 0.078
         - au-dessus de: 11000
           montant: 0.078
-logement . impact:
-  titre: Mon logement
-  icônes: 🏡
+
 compost:
   titre: mon compost
   icônes: 🗑️🌱🐛
@@ -2308,7 +2306,7 @@ logement:
 logement . chauffage:
   titre: Chauffer mon logement
   formule: énergie / habitants
-  icônes: 🏠🌡️
+  icônes: 🏡🌡️
   exposé: oui
 
 logement . habitants:
@@ -2324,8 +2322,34 @@ logement . habitants:
     en couple: 2
 
 logement . énergie . intensité: 
-  formule: 200 W/m2
-  note: ⚠ pour l'instant, ce chiffre est complètement au pif ! 
+  formule:
+    variations: 
+      - si: 
+          toutes ces conditions: 
+            - chauffage = 'gaz'
+            - type = 'maison'
+        alors: (201 + 166) / 2
+      - si: 
+          toutes ces conditions: 
+            - chauffage = 'gaz'
+            - type = 'appartement'
+            - chaudière = 'individuelle'
+      - si: 
+          toutes ces conditions: 
+            - chauffage = 'gaz'
+            - type = 'appartement'
+            - chaudière = 'collective'
+        alors: (207 + 196) / 2
+      - si: 
+          toutes ces conditions: 
+            - chauffage = 'électrique'
+            - type = 'appartement'
+        alors: (98 + 65) / 2
+      - si: 
+          toutes ces conditions: 
+            - chauffage = 'électrique'
+            - type = 'maison'
+        alors: (150 + 106) / 2
 logement . énergie:
   formule: intensité * surface
 logement . surface:
