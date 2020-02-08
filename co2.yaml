@@ -85,10 +85,12 @@ chauffage . impact par kWh:
     - https://decrypterlenergie.org/decryptage-quel-est-le-contenu-en-co2-du-kwh-electrique
 
 chauffage . impact par kWh . électricité:
-  formule: 0.059
+  formule: 0.0538
   unité: kgCO₂e/kWh
   note: |
-    Pour l'électricité, nous retenons le chiffre de l'ADEME "Electricité - 2016 - usage : Eau Chaude Sanitaire - consommation".
+    Pour l'électricité, nous retenons le chiffre de l'ADEME "Electricité - 2018 - usage : Eau Chaude Sanitaire - consommation".
+
+    Pour plus d'infos sur la méthode de calcul du contenu carbone de l'électricité, lire la page wikipedia [Empreinte carbone de l'électricité](https://fr.wikipedia.org/wiki/Empreinte_carbone_de_l'%C3%A9lectricit%C3%A9#Les_contenus_CO2_par_usage_%E2%80%93_La_m%C3%A9thode_EDF-ADEME_(2005_r%C3%A9vis%C3%A9e_2011))
   références:
     - http://www.bilans-ges.ademe.fr/fr/accueil
     - https://www.electricitymap.org/?page=country&solar=false&remote=true&wind=false&countryCode=FR
