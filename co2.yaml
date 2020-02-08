@@ -2368,7 +2368,7 @@ logement . type . appartement . chaudière . individuelle:
 
 
 logement . chauffage . énergie . intensité: 
-  unité: kWh/m2
+  unité: kWh/m²
   note: |
     
     Nous avons choisi un modèle simplifié qui ne donne le choix qu'entre le gaz et l'électricité, car ils représentent en cumulé ~70% des usages pour les maisons et ~85% pour les appartements ([statistiques de 2015](https://www.bilans-ges.ademe.fr/documentation/UPLOAD_DOC_FR/index.htm?chauffage.htm)).
