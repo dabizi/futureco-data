@@ -2306,7 +2306,7 @@ terrasse chauffée . impact:
 logement: 
 
 logement . chauffage:
-  titre: Chauffer mon chez-moi
+  titre: Chauffer mon logement
   formule: énergie / habitants
   icônes: 🏠🌡️
   exposé: oui
