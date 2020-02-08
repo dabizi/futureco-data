@@ -2385,19 +2385,14 @@ logement . chauffage . énergie . intensité:
           toutes ces conditions: 
             - mode = 'gaz naturel'
             - type = 'appartement'
-        alors: 300
-        #      - si: 
-        #          toutes ces conditions: 
-        #            - mode = 'gaz naturel'
-        #            - type = 'appartement'
-        #            - logement . type . appartement . chaudière = 'individuelle'
-        #        alors: (146 + 125) / 2
-        #      - si: 
-        #          toutes ces conditions: 
-        #            - mode = 'gaz naturel'
-        #            - type = 'appartement'
-        #            - logement . type . appartement . chaudière = 'collective'
-        #        alors: (207 + 196) / 2
+            - logement . type . appartement . chaudière = 'individuelle'
+        alors: (146 + 125) / 2
+      - si: 
+          toutes ces conditions: 
+            - mode = 'gaz naturel'
+            - type = 'appartement'
+            - logement . type . appartement . chaudière = 'collective'
+        alors: (207 + 196) / 2
       - si: 
           toutes ces conditions: 
             - mode = 'électricité'
